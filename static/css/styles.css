@@ -1,0 +1,83 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.college-name {
+    text-align: center;
+    color: #333; /* You can adjust the color as needed */
+}
+
+
+.college-logo {
+    text-align: center;
+}
+
+.college-logo img {
+    max-width: 80px; /* Adjust the size of the college logo as needed */
+}
+
+
+.header-text {
+    text-align: center;
+}
+
+.header-text h1 {
+    margin: 0;
+}
+
+.association {
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+
+.form-container label {
+    font-size: 16px;
+}
+
+.form-container input[type="text"], .form-container input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-container input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-container input[type="submit"]:hover {
+    background-color: #555;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer img {
+    max-width: 200px;
+}

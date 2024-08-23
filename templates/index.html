@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/styles.css">
+    <title>Attendance System</title>
+</head>
+<body style="background-image: url('static/images/background.jpg');">
+    <div class="container">
+        <div class="header">
+            <div class="college-logo">
+                <img src="static/images/RNSIT_logo.jpg" alt="College Logo">
+            </div>
+            <div class="header-text">
+                <h1>RNS INSTITUTE OF TECHNOLOGY</h1>
+                <p>Bengaluru</p>
+                <br><br>
+            </div>
+        </div>
+        <div class="form-container">
+            <form action="/process_attendance" method="post" enctype="multipart/form-data">
+                <label for="file">Upload Image:</label>
+                <input type="file" name="file" id="file"><br><br>
+                <label for="teacher_name">Teacher Name:</label>
+                <input type="text" id="teacher_name" name="teacher_name" required><br><br>
+                <label for="subject_name">Subject Name:</label>
+                <input type="text" id="subject_name" name="subject_name" required><br><br>
+                <center><input type="submit" value="Take Attendance"></center>
+            </form>
+            <p>{{ message }}</p>
+            {% if attendance_file %}
+                <a href="{{ url_for('download', file_name=attendance_file) }}">Download Excel</a><br>
+            {% endif %}
+            {% if pdf_report %}
+                <a href="{{ url_for('download', file_name=pdf_report) }}">Download PDF Report</a>
+            {% endif %}
+        </div>
+        <div class="footer">
+                <br><span class="association">IN ASSOCIATION WITH</span>
+                <img src="static/images/Comp_logo.png" alt="Company Logo">  
+        </div>
+    </div>
+</body>
+</html>
